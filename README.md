@@ -1,6 +1,9 @@
 # RNDetox
 Testing out detox
 
+https://user-images.githubusercontent.com/36755092/154585022-41fb3bb3-75cc-4ea6-a401-8755b25d1cb1.mp4
+
+
 ### Following along these links:
 
 [Getting Started](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
