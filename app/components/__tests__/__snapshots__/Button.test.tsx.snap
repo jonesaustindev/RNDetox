@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders button 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#A267AC",
+      "borderRadius": 6,
+      "height": 52,
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+  testID="testButton"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 18,
+        },
+        null,
+      ]
+    }
+  >
+    Testing
+  </Text>
+</View>
+`;

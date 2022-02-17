@@ -9,11 +9,12 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import {QueryClient, QueryClientProvider} from 'react-query';
 
-import {ErrorBoundary} from './app/components/ErrorBoundary';
-import {Groceries} from './app/screens/Groceries';
+import {ErrorBoundary} from './components/ErrorBoundary';
+import {NavigationController} from './navigation/NavigationController';
+import {AuthProvider} from './context/AuthContext';
 
 const queryClient = new QueryClient();
 
@@ -27,30 +28,14 @@ function App() {
   return (
     <ErrorBoundary>
       <ReactQueryWrapper>
-        <SafeAreaView style={styles.flex}>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            contentContainerStyle={styles.container}>
-            <Groceries />
-          </ScrollView>
-        </SafeAreaView>
+        <AuthProvider>
+          <NavigationContainer>
+            <NavigationController />
+          </NavigationContainer>
+        </AuthProvider>
       </ReactQueryWrapper>
     </ErrorBoundary>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  flex: {
-    flex: 1,
-  },
-  wrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default App;
