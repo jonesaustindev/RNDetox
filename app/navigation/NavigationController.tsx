@@ -29,8 +29,22 @@ export function NavigationController() {
   if (isSignedIn) {
     return (
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Settings" component={Settings} />
+        <Tab.Screen
+          options={{
+            title: 'Home',
+            tabBarTestID: 'tab-home',
+          }}
+          name="Home"
+          component={Home}
+        />
+        <Tab.Screen
+          options={{
+            title: 'Settings',
+            tabBarTestID: 'tab-settings',
+          }}
+          name="Settings"
+          component={Settings}
+        />
       </Tab.Navigator>
     );
   }
