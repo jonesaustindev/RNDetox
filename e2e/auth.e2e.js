@@ -14,7 +14,7 @@ describe('Authentication flow', () => {
 
   it('sign in user and see home screen', async () => {
     await element(by.id('signInEmailInput')).typeText('test@test.com');
-    await element(by.id('signInPasswordInput')).typeText('Airship123!');
+    await element(by.id('signInPasswordInput')).typeText('Password123!');
     await element(by.id('signInSubmitButton')).tap();
 
     await expect(element(by.id('homeDataView'))).toBeVisible();
